@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FlowbiteService } from './services/flowbite.service';
 import { ThemeService } from './services/theme.service';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, LoadingBarModule, LoadingBarRouterModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

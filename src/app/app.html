@@ -1,4 +1,16 @@
-<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white" style="view-transition-name: main-container">
+<div
+  class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+  style="view-transition-name: main-container"
+>
+  <!-- Barra de loading -->
+  <ngx-loading-bar
+    color="#198bb6"
+    height="5px"
+    [includeSpinner]="false"
+    [fixed]="true"
+    ref="router"
+  ></ngx-loading-bar>
+
   <div style="view-transition-name: router-outlet">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>

@@ -1,5 +1,5 @@
-<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-  <div class="route-container">
-    <router-outlet></router-outlet>
+<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white" style="view-transition-name: main-container">
+  <div style="view-transition-name: router-outlet">
+    <router-outlet #outlet="outlet"></router-outlet>
   </div>
 </div>

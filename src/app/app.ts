@@ -24,5 +24,4 @@ export class App {
       flowbite.initFlowbite();
     });
   }
-
 }

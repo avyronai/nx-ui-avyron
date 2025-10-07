@@ -10,6 +10,10 @@ const routes: Routes = [
     loadChildren: () => import('./routes/login.routes').then((m) => m.loginRoutes),
   },
   {
+    path: 'register',
+    loadChildren: () => import('./routes/register.routes').then((m) => m.registerRoutes),
+  },
+  {
     path: 'error',
     loadChildren: () => import('./routes/error.routes').then((m) => m.errorRoutes),
   },

@@ -26,7 +26,6 @@ import {
   Shield,
   Globe,
 } from "lucide-react";
-import { useLoadingRouter } from "@/hooks/use-loading-router";
 import { useState, useEffect } from "react";
 import { 
   AnimatedElement, 
@@ -35,11 +34,9 @@ import {
   AnimatedButton 
 } from "@/components/animated-element";
 import { FloatingIcon } from "@/components/floating-elements";
-import { AnimatedCounter } from "@/components/animated-counter";
 import { Navigation } from "@/components/navigation";
 
 export default function Home() {
-  const router = useLoadingRouter();
   const [activeSection, setActiveSection] = useState("home");
 
   // Função para scroll suave
@@ -227,7 +224,7 @@ export default function Home() {
                   </div>
                   <CardTitle>Performance Extrema</CardTitle>
                   <CardDescription>
-                    Carregamento 10x mais rápido com nossa infraestrutura
+                    Carregamento 10x mais rápido com nossa
                     otimizada e CDN global
                   </CardDescription>
                 </CardHeader>

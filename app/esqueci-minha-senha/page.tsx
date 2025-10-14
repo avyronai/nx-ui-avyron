@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Recuperar Senha - Avyron AI",
+  description: "Recupere o acesso à sua conta redefinindo sua senha de forma segura.",
+};
+
 'use client';
 
 import { useState } from 'react';

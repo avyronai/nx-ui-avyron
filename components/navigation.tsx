@@ -16,6 +16,7 @@ import {
   User,
   LogIn
 } from "lucide-react";
+import Image from "next/image";
 
 interface NavigationProps {
   activeSection: string;
@@ -90,26 +91,24 @@ export function Navigation({ activeSection, onSectionClick }: NavigationProps) {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 setIsMenuOpen(false);
               }}
-              className="flex items-center space-x-3 hover:opacity-80 transition-opacity group cursor-pointer"
+              className="flex items-center space-x-3 group cursor-pointer"
             >
-              <div className="w-9 h-9 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-                <span className="text-primary-foreground font-bold text-lg">
-                  Av
-                </span>
+              <div className="w-9 h-9 flex items-center justify-center">
+                <Image src="/avyron.png" alt="Avyron AI" width={36} height={36} />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent xl:block hidden">
+              <span className="text-lg font-bold bg-foreground bg-clip-text text-transparent">
                 Avyron AI
               </span>
             </button>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-2">
                 {menuItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleLinkClick(item.id)}
-                    className={`relative px-4 py-1.5 text-sm font-medium rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 group cursor-pointer ${
+                    className={`relative px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 group cursor-pointer ${
                       activeSection === item.id
                         ? "text-primary font-semibold bg-primary/10"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
